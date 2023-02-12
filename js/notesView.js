@@ -36,10 +36,14 @@ export default class notesView {
   }
 
   _innerHtmlNote(id, title, body, updated) {
-    const max_body = 50;
+    const max_body = 20;
+    const max_Title = 7;
     return `<div class="nav__note-text" data-id=${id}>
         <div class="nav-header">
-        <div class="nav__small-note">${title}</div>
+        <div class="nav__small-note">  
+        ${title.substring(0, max_Title)}
+        ${title.length > max_body ? "..." : ""}
+        </div>
         <span class="nav-trash" data-id=${id}><i class="fa-solid fa-trash"></i></span>
         </div>
         <div class="nav__small-body">
