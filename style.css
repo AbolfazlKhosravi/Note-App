@@ -1,0 +1,218 @@
+@import url('./assets/style/fonts.css');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root {
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #0c0b0b;
+    --mainGrey: #7c7c7c;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+    --mainRed: #de2a7b;
+    --bodyColor: #f6f6f6;
+}
+
+#app{
+    display: flex;
+    font-family: "iranyekan";
+    flex-direction: column;
+    justify-content: start;
+}
+body{
+    background-color: var(--bodyColor);
+    color: var(--mainBlack);
+    font-family: "iranyekan";
+}
+
+/* ---nav--- */
+.nav{
+    background: linear-gradient(180deg, #324467, #283142);
+    width: var(--nav-width);
+    padding:2rem; 
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* justify-content: space-between; */
+   /* border-radius: 100px 0px 0px; */
+    /* min-width: 17rem; */
+    /* height: 100vh; */
+    /* position: sticky; */
+}
+.nav__logo{
+     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 2.2rem;
+    width: 100%;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.nav__note{
+    flex-grow: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    overflow-y: auto;
+    width: 100%;
+    min-height: 4rem;
+    max-height: 10rem;
+    max-width: 25rem;
+    cursor: pointer;
+}
+.nav__note::-webkit-scrollbar{
+    display: none;
+}
+
+.nav__add{
+    border: 0;
+    outline: 0;
+    margin-top: .5rem;
+    height: 2.5rem;
+    width: 90%;
+    font-weight: 700;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #fff;
+    color: var(--mainBlack);
+    text-transform: capitalize;
+    font-family: "iranyekan";
+    max-width: 35rem;
+    cursor: pointer;
+}
+.nots{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: flex-start;
+ margin: 1rem;
+}
+.input-title{
+    border: 0;
+    outline: 0;
+    height: 5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "iranyekan";
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.input-body{
+    border: 0;
+    outline: 0;
+    padding: 1rem ;
+    height: 100vh;
+    border-radius: 10px; 
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "iranyekan";
+    min-width: 100%;
+    max-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.nav__note-text{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 0rem;
+    transition: all .5s ease-in-out;
+    color: #fff;
+    border-radius: 8px;
+    padding: .5rem;
+    width: 100%;
+    font-family: "iranyekan";
+    margin-bottom: 1rem;
+}
+.nav__small-note{
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: "iranyekan";
+    flex-wrap: wrap;
+    max-width: 8rem;
+}
+.nav__small-body{
+    font-weight: 400;
+    font-size: .8rem;
+    margin: .3rem 0rem;
+    font-family: "iranyekan";
+}
+.nav__time{
+    font-size: .6rem;
+}
+.nav__note-text-selected{
+    color: var(--mainGrey);
+    background-color: #f6f6f6;
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.nav-trash{
+    background-color: #fff;
+    color: var(--mainRed);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 100%;
+}
+@media screen and (min-width:650px) {
+    #app{
+        flex-direction: row;
+    }
+    .nav{
+        position: sticky;
+        height: 100vh;
+       border-radius: 100px 0px 0px;
+       max-width: 15rem;
+    }
+    .nav__logo{
+       padding: 1rem;
+       font-size: 1.5rem;
+   }
+   .nav__note{
+    min-height: 4rem;
+    flex-grow: 1;
+    max-height: 30rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.nav__add{
+   bottom: 0;
+}
+.nots{
+    margin: 2.2rem;
+    width: 70%;
+   }
+}
+@media screen and (min-width:1000px) {
+    .nav__logo{
+       padding: 1rem;
+       font-size: 1.8rem;
+       height: 10vh;
+   }
+   .nav__note{
+max-height: 80vh;
+  }
+   .nav__add{
+   height: 6vh;
+   }
+
+}
