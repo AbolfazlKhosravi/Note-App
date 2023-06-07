@@ -41,11 +41,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
    /* justify-content: space-between; */
    /* border-radius: 100px 0px 0px; */
     /* min-width: 17rem; */
     /* height: 100vh; */
     /* position: sticky; */
+}
+.nav-tittle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .nav__logo{
      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -64,8 +70,8 @@ body{
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     overflow-y: auto;
     width: 100%;
-    min-height: 4rem;
-    max-height: 10rem;
+    min-height: 40vh;
+    max-height: 40vh;
     max-width: 25rem;
     cursor: pointer;
 }
@@ -186,9 +192,9 @@ body{
        font-size: 1.5rem;
    }
    .nav__note{
-    min-height: 4rem;
     flex-grow: 1;
-    max-height: 30rem;
+    min-height: 80vh;
+    max-height: 80vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -209,7 +215,8 @@ body{
        height: 10vh;
    }
    .nav__note{
-max-height: 80vh;
+    min-height: 70vh;
+    max-height: 70vh;
   }
    .nav__add{
    height: 6vh;

@@ -8,8 +8,8 @@ export default class notesView {
     this.delet = delet;
 
     this.root.innerHTML = ` <nav class="nav">
-        <div class="nav__logo">note app</div>
-        <div class="nav__note"></div>
+        <div class="nav-tittle"> <div class="nav__logo">note app</div>
+        <div class="nav__note"></div></div>
         <button class="nav__add">add note</button>
        </nav>
         <div class="nots">
